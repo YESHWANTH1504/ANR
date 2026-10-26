@@ -1,0 +1,6 @@
+export { GalleryHero } from './GalleryHero'
+export { FeaturedGallery } from './FeaturedGallery'
+export { GalleryFilters } from './GalleryFilters'
+export { GalleryCollection } from './GalleryCollection'
+export { GalleryContext } from './GalleryContext'
+export { GalleryCTA } from './GalleryCTA'

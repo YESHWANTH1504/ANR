@@ -1,0 +1,7 @@
+export * from './Footer'
+export * from './FooterBrand'
+export * from './FooterNavigation'
+export * from './FooterContact'
+export * from './FooterTrustBar'
+export * from './FooterBottomBar'
+export * from './BackToTop'

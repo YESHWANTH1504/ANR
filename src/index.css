@@ -1,0 +1,374 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-nav: 1120px;
+}
+
+@layer base {
+  :root {
+    /* ==========================================================================
+       ANRCAS COLLEGIATE DESIGN TOKENS
+       - Obsidian: #0D0D0D (High-contrast utility surfaces, dark footer)
+       - Deep Navy: #08326B (Deep collegiate accents, dark borders)
+       - Collegiate Blue: #0C4DA2 (Signature institutional blue, primary actions)
+       - Pale Blue: #EFF6FF (Subtle academic backgrounds & badge tints)
+       - Gold: #E4B316 (Signature gold for accents, pills & CTAs)
+       - Gold Hover: #C99B0E (Interactive hover state for gold actions)
+       - Off-White: #F8FAFC (Modern editorial page & card canvas)
+       - White: #FFFFFF (Crisp elevated surfaces & card containers)
+       - Muted Text: #475569 (Slate 600, 5.4:1 contrast ratio against white/off-white)
+       - Muted Text Dark: #94A3B8 (6.5:1 contrast against obsidian #0D0D0D)
+       ========================================================================== */
+
+    /* Core Color Tokens */
+    --color-obsidian: #0D0D0D;
+    --color-deep-navy: #08326B;
+    --color-collegiate-blue: #0C4DA2;
+    --color-pale-blue: #EFF6FF;
+    --color-gold: #E4B316;
+    --color-gold-hover: #C99B0E;
+    --color-off-white: #F8FAFC;
+    --color-white: #FFFFFF;
+    --color-muted-text: #475569;
+    --color-muted-text-dark: #94A3B8;
+
+    /* Semantic Primary & Secondary mappings */
+    --color-primary: var(--color-collegiate-blue);
+    --color-primary-dark: var(--color-deep-navy);
+    --color-primary-light: #1E40AF;
+    --color-primary-rgb: 12, 77, 162;
+
+    --color-secondary: var(--color-gold);
+    --color-secondary-dark: var(--color-gold-hover);
+    --color-secondary-light: #FEF9E7;
+    --color-secondary-rgb: 228, 179, 22;
+
+    --color-accent: var(--color-gold);
+    --color-accent-dark: var(--color-gold-hover);
+    --color-accent-light: #FFFBEB;
+    --color-accent-rgb: 228, 179, 22;
+
+    /* Editorial & Semantic Aliases */
+    --color-ink: var(--color-obsidian);
+    --color-ink-soft: #1E293B;
+    --color-ivory: var(--color-off-white);
+    --color-paper: var(--color-white);
+    --color-sand: #F1F5F9;
+    --color-charcoal: #334155;
+    --color-muted: var(--color-muted-text);
+    --color-anrcas-blue: var(--color-collegiate-blue);
+    --color-border: #E2E8F0;
+    --color-border-subtle: #F1F5F9;
+    --color-border-strong: #CBD5E1;
+
+    /* Backward Compatible Aliases */
+    --color-srm-blue: var(--color-collegiate-blue);
+    --color-srm-blue-dark: var(--color-deep-navy);
+    --color-srm-blue-deep: #05224D;
+    --color-srm-blue-light: var(--color-pale-blue);
+    --color-srm-yellow: var(--color-gold);
+    --color-srm-yellow-hover: var(--color-gold-hover);
+    --color-srm-yellow-light: #FEF9E7;
+    --color-srm-dark: var(--color-obsidian);
+
+    /* Neutrals & Surfaces */
+    --color-background: var(--color-off-white);
+    --color-surface: var(--color-white);
+    --color-surface-subtle: #F1F5F9;
+    --color-surface-elevated: var(--color-white);
+
+    /* Typography & Contrast */
+    --color-text: #0D0D0D;
+    --color-text-secondary: #334155;
+    --color-text-muted: var(--color-muted-text);
+    --color-text-inverted: #FFFFFF;
+
+    /* Status Tokens */
+    --color-success: #0F766E;
+    --color-success-bg: #F0FDFA;
+    --color-warning: #B45309;
+    --color-warning-bg: #FEFCE8;
+    --color-error: #B91C1C;
+    --color-error-bg: #FEF2F2;
+    --color-info: var(--color-collegiate-blue);
+    --color-info-bg: var(--color-pale-blue);
+
+    /* Spacing System */
+    --space-1: 0.25rem;  /* 4px */
+    --space-2: 0.5rem;   /* 8px */
+    --space-3: 0.75rem;  /* 12px */
+    --space-4: 1rem;     /* 16px */
+    --space-6: 1.5rem;   /* 24px */
+    --space-8: 2rem;     /* 32px */
+    --space-12: 3rem;    /* 48px */
+    --space-16: 4rem;    /* 64px */
+    --space-20: 5rem;    /* 80px */
+    --space-24: 6rem;    /* 96px */
+
+    /* Container & Gutter Tokens */
+    --container-narrow: 896px;
+    --container-default: 1280px;
+    --container-wide: 1388px;
+    --gutter-mobile: 1rem;
+    --gutter-tablet: 1.5rem;
+    --gutter-desktop: 2rem;
+
+    /* Restrained Academic Border Radii */
+    --radius-none: 0px;
+    --radius-sm: 2px;
+    --radius-md: 4px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-pill: 9999px;
+
+    /* Refined Editorial Shadows */
+    --shadow-subtle: 0 1px 2px 0 rgba(13, 13, 13, 0.04);
+    --shadow-card: 0 1px 3px 0 rgba(13, 13, 13, 0.06), 0 1px 2px -1px rgba(13, 13, 13, 0.04);
+    --shadow-elevated: 0 4px 6px -1px rgba(13, 13, 13, 0.08), 0 2px 4px -2px rgba(13, 13, 13, 0.04);
+    --shadow-overlay: 0 10px 15px -3px rgba(13, 13, 13, 0.12), 0 4px 6px -4px rgba(13, 13, 13, 0.06);
+
+    /* Transitions & Motion */
+    --motion-fast: 150ms;
+    --motion-normal: 250ms;
+    --motion-slow: 400ms;
+    --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-base: 220ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Accessibility: Prefers Reduced Motion Global Enforcement */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Accessible Focus Ring Utility (High contrast against light & dark) */
+  :focus-visible {
+    outline: 2px solid var(--color-collegiate-blue);
+    outline-offset: 2px;
+  }
+
+  /* Prevent horizontal scroll overflow at 320px viewport & establish 17px/16px baseline */
+  html {
+    overflow-x: clip;
+    font-size: 17px;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 16px;
+    }
+  }
+
+  body {
+    overflow-x: clip;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Source Sans 3', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+}
+
+@theme {
+  --font-sans: 'Source Sans 3', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Newsreader', Georgia, Cambria, 'Times New Roman', serif;
+  --font-display: 'Newsreader', Georgia, serif;
+
+  --color-obsidian: #0D0D0D;
+  --color-deep-navy: #08326B;
+  --color-collegiate-blue: #0C4DA2;
+  --color-pale-blue: #EFF6FF;
+  --color-gold: #E4B316;
+  --color-gold-hover: #C99B0E;
+  --color-off-white: #F8FAFC;
+  --color-muted-text: #475569;
+
+  --color-brand-primary: var(--color-collegiate-blue);
+  --color-brand-primary-dark: var(--color-deep-navy);
+  --color-brand-primary-light: #1E40AF;
+
+  --color-brand-secondary: var(--color-gold);
+  --color-brand-secondary-dark: var(--color-gold-hover);
+  --color-brand-secondary-light: #FEF9E7;
+
+  --color-brand-accent: var(--color-gold);
+  --color-brand-accent-dark: var(--color-gold-hover);
+  --color-brand-accent-light: #FFFBEB;
+
+  --color-surface-canvas: var(--color-background);
+  --color-surface-card: var(--color-surface);
+  --color-surface-subtle: var(--color-surface-subtle);
+
+  --color-ink-900: var(--color-text);
+  --color-ink-700: var(--color-text-secondary);
+  --color-ink-500: var(--color-text-muted);
+  --color-ink-inverted: var(--color-text-inverted);
+
+  --color-border-main: var(--color-border);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-strong: var(--color-border-strong);
+
+  --color-status-success: var(--color-success);
+  --color-status-warning: var(--color-warning);
+  --color-status-error: var(--color-error);
+}
+
+/* ==========================================================================
+   COLLEGIATE TYPOGRAPHY SYSTEM & EDITORIAL SCALES
+   ========================================================================== */
+
+/* Editorial Hero & Section Heading Scales */
+.collegiate-hero-title,
+.display-hero {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.25rem); /* ~36px mobile -> 68px desktop */
+}
+
+.collegiate-section-title,
+.srm-section-title,
+.display-editorial {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 3.5vw + 0.5rem, 3rem); /* ~32px mobile -> 48px desktop */
+  color: #0F172A;
+}
+
+.collegiate-subheading,
+.display-section {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  font-size: clamp(1.35rem, 2vw + 0.5rem, 1.85rem); /* ~22px -> 30px */
+}
+
+.collegiate-gold-divider,
+.srm-divider {
+  width: 64px;
+  height: 3.5px;
+  background-color: var(--color-gold);
+  border-radius: 2px;
+  margin-top: 12px;
+}
+
+.collegiate-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem; /* ~13px */
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-collegiate-blue);
+}
+
+.collegiate-body {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 0.3vw + 0.95rem, 1.125rem); /* 16px -> 18px */
+  line-height: 1.68;
+  color: #334155;
+}
+
+/* Keyframes */
+@keyframes heroZoom {
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes heroRevealText {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-hero-zoom {
+  animation: heroZoom 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-text {
+  animation: heroRevealText 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+/* Button & Link Micro-Interactions */
+.arrow-nudge {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .arrow-nudge,
+.group:focus-visible .arrow-nudge {
+  transform: translateX(4px);
+}
+
+/* Card Styles */
+.card-collegiate,
+.srm-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card-collegiate:hover,
+.srm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(12, 77, 162, 0.12), 0 4px 8px -2px rgba(0, 0, 0, 0.05);
+  border-color: #0C4DA2;
+}
+
+/* Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .animate-hero-zoom,
+  .animate-hero-text,
+  .arrow-nudge,
+  .card-collegiate,
+  .srm-card {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Collegiate Compact Metadata & Badge Utilities */
+.collegiate-metadata {
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* ~14px mobile, 15px desktop */
+  line-height: 1.45;
+  color: #64748B;
+}
+
+.collegiate-badge-text {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem; /* ~13px mobile, 13.8px desktop */
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+

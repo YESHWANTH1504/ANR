@@ -1,0 +1,5 @@
+export { DepartmentsHero } from './DepartmentsHero'
+export { DepartmentDirectory } from './DepartmentDirectory'
+export { DepartmentCategories } from './DepartmentCategories'
+export { ProgrammeConnections } from './ProgrammeConnections'
+export { DepartmentsCTA } from './DepartmentsCTA'

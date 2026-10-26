@@ -1,0 +1,6 @@
+export { PlacementsHero } from './PlacementsHero'
+export { PlacementSupport } from './PlacementSupport'
+export { AcademicCareerConnection } from './AcademicCareerConnection'
+export { StudentReadiness } from './StudentReadiness'
+export { PlacementInformation } from './PlacementInformation'
+export { PlacementsCTA } from './PlacementsCTA'

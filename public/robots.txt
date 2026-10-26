@@ -1,0 +1,11 @@
+# ANRCAS robots.txt
+# A.N. Radhakrishnan College of Arts & Science (Vadamavandal)
+User-agent: *
+Allow: /
+
+# Exclude non-production / internal showcase routes
+Disallow: /design-system
+Disallow: /committees
+
+# Official Sitemap
+Sitemap: https://anrcas.edu.in/sitemap.xml

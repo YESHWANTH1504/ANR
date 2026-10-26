@@ -1,0 +1,6 @@
+export { NewsHero } from './NewsHero'
+export { FeaturedNews } from './FeaturedNews'
+export { NewsFilters } from './NewsFilters'
+export { NewsCatalogue } from './NewsCatalogue'
+export { InstitutionalUpdates } from './InstitutionalUpdates'
+export { NewsCTA } from './NewsCTA'

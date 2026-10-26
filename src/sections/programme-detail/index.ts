@@ -1,0 +1,6 @@
+export * from './ProgrammeDetailHero'
+export * from './ProgrammeFacts'
+export * from './ProgrammeOverview'
+export * from './RelatedDepartment'
+export * from './RelatedProgrammes'
+export * from './ProgrammeDetailCTA'
