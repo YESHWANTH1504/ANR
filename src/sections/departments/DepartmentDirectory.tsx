@@ -1,13 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, GraduationCap } from 'lucide-react'
 import { Container } from '@/components/shared/Container'
 import { Section } from '@/components/shared/Section'
 import { H2, TextLead, EditorialLabel } from '@/components/ui/Typography'
-import { DEPARTMENTS } from '@/data/departments'
+import { DEPARTMENTS, type Department } from '@/data/departments'
 import { PROGRAMMES } from '@/data/programmes'
+import { publicService } from '@/api/services/publicService'
 
 export const DepartmentDirectory: React.FC = () => {
+  const [departmentList, setDepartmentList] = useState<Department[]>(DEPARTMENTS)
+
+  useEffect(() => {
+    publicService
+      .getDepartments()
+      .then((data) => {
+        if (data && data.length > 0) {
+          setDepartmentList(
+            data.map((d) => {
+              const staticMatch = DEPARTMENTS.find((item) => item.id === d.id || item.slug === d.slug)
+              return {
+                id: d.id,
+                name: d.name,
+                slug: d.slug,
+                code: d.code,
+                overview: d.overview,
+                category: (d.category as Department['category']) || 'Science',
+                programmesOffered: staticMatch?.programmesOffered || [],
+              }
+            })
+          )
+        }
+      })
+      .catch(() => {
+        // Fall back gracefully to verified initial departments
+      })
+  }, [])
+
   // Helper to find slug for a programme name
   const findProgrammeSlug = (progName: string): string | undefined => {
     const match = PROGRAMMES.find((p) =>
@@ -38,7 +67,7 @@ export const DepartmentDirectory: React.FC = () => {
 
         {/* Prospectus Directory List */}
         <div className="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
-          {DEPARTMENTS.map((dept, index) => {
+          {departmentList.map((dept, index) => {
             const indexNumber = String(index + 1).padStart(2, '0')
 
             return (

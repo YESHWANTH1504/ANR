@@ -132,7 +132,7 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
       >
         <MainNavigation
           isCompact={isScrolled}
-          onOpenMobileMenu={() => setIsMobileMenuOpen(true)}
+          onOpenMobileMenu={() => setIsMobileMenuOpen((prev) => !prev)}
           isMobileMenuOpen={isMobileMenuOpen}
         />
       </header>

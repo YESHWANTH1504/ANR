@@ -8,8 +8,10 @@ import {
 } from '@/sections/gallery'
 import { GalleryLightbox } from '@/components/gallery/GalleryLightbox'
 import { GALLERY_ITEMS, type GalleryItem } from '@/data/gallery'
+import { publicService } from '@/api/services/publicService'
 
 export const GalleryPage: React.FC = () => {
+  const [items, setItems] = useState<GalleryItem[]>(GALLERY_ITEMS)
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
   const [lightboxOpen, setLightboxOpen] = useState<boolean>(false)
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
@@ -19,13 +21,35 @@ export const GalleryPage: React.FC = () => {
     const originalTitle = document.title
     document.title = 'Gallery | A.N. Radhakrishnan College of Arts & Science'
     window.scrollTo({ top: 0, behavior: 'instant' })
+
+    publicService
+      .getGallery()
+      .then((data) => {
+        if (data && data.length > 0) {
+          setItems(
+            data.map((g) => ({
+              id: g.id,
+              title: g.title,
+              category: g.category as GalleryItem['category'],
+              src: g.image_url,
+              alt: g.alt_text,
+              caption: g.caption,
+              featured: g.is_featured,
+            }))
+          )
+        }
+      })
+      .catch(() => {
+        // Fall back gracefully to verified initial gallery
+      })
+
     return () => {
       document.title = originalTitle
     }
   }, [])
 
   const handleOpenLightbox = (item: GalleryItem, triggerEl?: HTMLElement) => {
-    const idx = GALLERY_ITEMS.findIndex((i) => i.id === item.id)
+    const idx = items.findIndex((i) => i.id === item.id)
     setCurrentImageIndex(idx !== -1 ? idx : 0)
     triggerRef.current = triggerEl || (document.activeElement instanceof HTMLElement ? document.activeElement : null)
     setLightboxOpen(true)
@@ -49,7 +73,7 @@ export const GalleryPage: React.FC = () => {
 
       {/* SECTION 3: Gallery Collection with Category Filters */}
       <GalleryCollection
-        items={GALLERY_ITEMS}
+        items={items}
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
         onOpenLightbox={handleOpenLightbox}
@@ -63,7 +87,7 @@ export const GalleryPage: React.FC = () => {
 
       {/* SECTION 4: Image Viewer / Lightbox Modal */}
       <GalleryLightbox
-        items={GALLERY_ITEMS}
+        items={items}
         currentIndex={currentImageIndex}
         isOpen={lightboxOpen}
         onClose={handleCloseLightbox}

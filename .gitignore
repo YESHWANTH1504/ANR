@@ -16,12 +16,14 @@ dist-ssr
 .env
 *.env
 !*.env.example
-.env.*.local
+.env.*
+!*.env.example
 
 # Databases & local persistent state
 *.db
 *.sqlite
 *.sqlite3
+*.bak
 backend/anr_dev.db
 anr_dev.db
 

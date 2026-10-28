@@ -1,0 +1,1841 @@
+{
+  "timestamp": "2026-10-28T11:45:13Z",
+  "defects_verified": {
+    "DEF-18-01": {
+      "description": "Static images resolve with genuine image content-type and payload",
+      "checks": [
+        {
+          "url": "http://localhost:5173/assets/campus_main.webp",
+          "status": 200,
+          "content_type": "image/webp",
+          "bytes": 160070,
+          "valid": true
+        },
+        {
+          "url": "http://localhost:5173/assets/founder.webp",
+          "status": 200,
+          "content_type": "image/webp",
+          "bytes": 195950,
+          "valid": true
+        },
+        {
+          "url": "http://localhost:5173/assets/gallery_sports.webp",
+          "status": 200,
+          "content_type": "image/webp",
+          "bytes": 68930,
+          "valid": true
+        },
+        {
+          "url": "http://localhost:5173/assets/campus_building.jpg",
+          "status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 365569,
+          "valid": true
+        }
+      ],
+      "status": "PASS"
+    },
+    "DEF-18-02": {
+      "description": "Mobile navigation drawer two-way toggle and close button",
+      "status": "PASS"
+    },
+    "DEF-18-03": {
+      "description": "Admin dashboard loadData callback React warning eliminated",
+      "oxlint_output": "> anr@0.0.0 lint\n> oxlint\n\nFound 0 warnings and 0 errors.\nFinished in 72ms on 222 files with 116 rules using 12 threads.",
+      "status": "PASS"
+    }
+  },
+  "browser_audit": {
+    "Edge": {
+      "routes": [
+        {
+          "title": "A.N. Radhakrishnan College of Arts & Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Campus\nExcellence"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "About ANRCAS | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "An Institution Built Around Purpose, Learning & Opportunity"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/about",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Leadership | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Leadership & Vision"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/leadership",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Academics | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Academic Disciplines Structured for Depth & Practical Capability"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/academics",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Academic Departments | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Academic Departments Overseeing Collegiate Instruction."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/departments",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Programmes | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Curricula & Degrees Structured for Academic Distinction."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "B.Sc Computer Science | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Science (B.Sc) B.Sc Computer Science"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/computer-science",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "B.Sc Mathematics | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Science (B.Sc) B.Sc Mathematics"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/mathematics",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "B.Com (Bachelor of Commerce) | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Commerce (B.Com) B.Com (Bachelor of Commerce)"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/bcom",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "B.Com Corporate Secretaryship | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Commerce (B.Com CS) B.Com Corporate Secretaryship"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/corporate-secretaryship",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "BBA - Bachelor of Business Administration | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Business Administration (BBA) BBA - Bachelor of Business Administration"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/bba",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "M.Com (Master of Commerce) | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Master of Commerce (M.Com) M.Com (Master of Commerce)"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/mcom",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Admissions | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "A Thoughtful Academic Beginning at ANRCAS."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admissions",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Admissions | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "A Thoughtful Academic Beginning at ANRCAS."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admission",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Campus Life | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Vibrant Campus Community, Athleticism & Civic Purpose."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/campus-life",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Facilities | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Purpose-Engineered Spaces for Scholarship & Practical Learning."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/facilities",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Placements | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Preparing Students for Professional Distinction & Real-World Capability."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/placements",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "News & Events | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "The Institutional Dispatch: Reports, Symposiums & Campus Milestones."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "NSS Unit Completes Seven-Day Special Camp in Vadamavandal | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "NSS Unit Completes Seven-Day Special Camp in Vadamavandal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news/nss-special-camp-vadamavandal",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Inter-Departmental Symposium Hosted at ANR College | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Inter-Departmental Symposium Hosted at ANR College"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news/inter-departmental-symposium",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Annual Inter-Departmental Sports & Athletics Meet Held | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Annual Inter-Departmental Sports & Athletics Meet Held"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news/annual-sports-athletics-meet",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Social Welfare & Health Awareness Programme Conducted | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Social Welfare & Health Awareness Programme Conducted"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news/social-welfare-awareness-programme",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Gallery | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Visual Chronicles of Campus Scholarship & Life."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/gallery",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Blog | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Insights & Stories."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/blog",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Editorial Article Not Found | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Editorial Article Not Found"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/blog/perspectives-on-higher-education",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Committees & Governance | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Committees & Governance"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/committees",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Contact | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Contact ANRCAS"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/contact",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "Design System & Component Showcase | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 3,
+          "h1Texts": [
+            "Global Design System & Technical Foundation",
+            "Excellence in Arts, Science & Commerce",
+            "Affiliated with Thiruvalluvar University, Vellore"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/design-system",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "404 \u2014 Page Not Found | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Page Not Found"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/non-existent-404-test",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/login",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/dashboard",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/enquiries",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/messages",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/programmes",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/departments",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/news",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/gallery",
+          "browser": "Edge",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/settings",
+          "browser": "Edge",
+          "status": "PASS"
+        }
+      ],
+      "a11y": [],
+      "performance": {
+        "/": {
+          "domInteractive": 13,
+          "domContentLoaded": 90,
+          "loadComplete": 91,
+          "transferSize": 300,
+          "resourcesCount": 86
+        },
+        "/programmes/computer-science": {
+          "domInteractive": 31,
+          "domContentLoaded": 204,
+          "loadComplete": 205,
+          "transferSize": 300,
+          "resourcesCount": 95
+        },
+        "/news/nss-special-camp-vadamavandal": {
+          "domInteractive": 15,
+          "domContentLoaded": 112,
+          "loadComplete": 113,
+          "transferSize": 300,
+          "resourcesCount": 87
+        },
+        "/admissions": {
+          "domInteractive": 17,
+          "domContentLoaded": 115,
+          "loadComplete": 116,
+          "transferSize": 300,
+          "resourcesCount": 99
+        },
+        "/contact": {
+          "domInteractive": 16,
+          "domContentLoaded": 101,
+          "loadComplete": 102,
+          "transferSize": 300,
+          "resourcesCount": 95
+        }
+      }
+    },
+    "Chrome": {
+      "routes": [
+        {
+          "title": "A.N. Radhakrishnan College of Arts & Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Campus\nExcellence"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "About ANRCAS | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "An Institution Built Around Purpose, Learning & Opportunity"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/about",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Leadership | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Leadership & Vision"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/leadership",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Academics | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Academic Disciplines Structured for Depth & Practical Capability"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/academics",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Academic Departments | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Academic Departments Overseeing Collegiate Instruction."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/departments",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Programmes | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Curricula & Degrees Structured for Academic Distinction."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "B.Sc Computer Science | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Science (B.Sc) B.Sc Computer Science"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/computer-science",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "B.Sc Mathematics | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Science (B.Sc) B.Sc Mathematics"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/mathematics",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "B.Com (Bachelor of Commerce) | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Commerce (B.Com) B.Com (Bachelor of Commerce)"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/bcom",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "B.Com Corporate Secretaryship | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Commerce (B.Com CS) B.Com Corporate Secretaryship"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/corporate-secretaryship",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "BBA - Bachelor of Business Administration | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Bachelor of Business Administration (BBA) BBA - Bachelor of Business Administration"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/bba",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "M.Com (Master of Commerce) | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Master of Commerce (M.Com) M.Com (Master of Commerce)"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/programmes/mcom",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Admissions | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "A Thoughtful Academic Beginning at ANRCAS."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admissions",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Admissions | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "A Thoughtful Academic Beginning at ANRCAS."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admission",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Campus Life | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Vibrant Campus Community, Athleticism & Civic Purpose."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/campus-life",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Facilities | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Purpose-Engineered Spaces for Scholarship & Practical Learning."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/facilities",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Placements | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Preparing Students for Professional Distinction & Real-World Capability."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/placements",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "News & Events | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "The Institutional Dispatch: Reports, Symposiums & Campus Milestones."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "NSS Unit Completes Seven-Day Special Camp in Vadamavandal | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "NSS Unit Completes Seven-Day Special Camp in Vadamavandal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news/nss-special-camp-vadamavandal",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Inter-Departmental Symposium Hosted at ANR College | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Inter-Departmental Symposium Hosted at ANR College"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news/inter-departmental-symposium",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Annual Inter-Departmental Sports & Athletics Meet Held | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Annual Inter-Departmental Sports & Athletics Meet Held"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news/annual-sports-athletics-meet",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Social Welfare & Health Awareness Programme Conducted | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Social Welfare & Health Awareness Programme Conducted"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/news/social-welfare-awareness-programme",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Gallery | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Visual Chronicles of Campus Scholarship & Life."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/gallery",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Blog | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Insights & Stories."
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/blog",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Editorial Article Not Found | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Editorial Article Not Found"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/blog/perspectives-on-higher-education",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Committees & Governance | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Committees & Governance"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/committees",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Contact | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Contact ANRCAS"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/contact",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "Design System & Component Showcase | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 3,
+          "h1Texts": [
+            "Global Design System & Technical Foundation",
+            "Excellence in Arts, Science & Commerce",
+            "Affiliated with Thiruvalluvar University, Vellore"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/design-system",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "404 \u2014 Page Not Found | A.N. Radhakrishnan College of Arts & Science",
+          "h1Count": 1,
+          "h1Texts": [
+            "Page Not Found"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1905,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/non-existent-404-test",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/login",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/dashboard",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/enquiries",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/messages",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/programmes",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/departments",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/news",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/gallery",
+          "browser": "Chrome",
+          "status": "PASS"
+        },
+        {
+          "title": "A.N. Radhakrishnan College of Arts and Science | Vadamavandal",
+          "h1Count": 1,
+          "h1Texts": [
+            "Administrative Portal"
+          ],
+          "hasOverflow": false,
+          "scrollWidth": 1920,
+          "innerWidth": 1920,
+          "brokenImages": [],
+          "imagesMissingAlt": [],
+          "buttonsMissingLabel": 0,
+          "route": "/admin/settings",
+          "browser": "Chrome",
+          "status": "PASS"
+        }
+      ],
+      "a11y": [],
+      "performance": {
+        "/": {
+          "domInteractive": 12,
+          "domContentLoaded": 62,
+          "loadComplete": 63,
+          "transferSize": 300,
+          "resourcesCount": 90
+        },
+        "/programmes/computer-science": {
+          "domInteractive": 10,
+          "domContentLoaded": 59,
+          "loadComplete": 59,
+          "transferSize": 300,
+          "resourcesCount": 99
+        },
+        "/news/nss-special-camp-vadamavandal": {
+          "domInteractive": 12,
+          "domContentLoaded": 66,
+          "loadComplete": 67,
+          "transferSize": 300,
+          "resourcesCount": 91
+        },
+        "/admissions": {
+          "domInteractive": 10,
+          "domContentLoaded": 73,
+          "loadComplete": 74,
+          "transferSize": 300,
+          "resourcesCount": 103
+        },
+        "/contact": {
+          "domInteractive": 10,
+          "domContentLoaded": 62,
+          "loadComplete": 63,
+          "transferSize": 300,
+          "resourcesCount": 99
+        }
+      }
+    },
+    "Firefox": {
+      "status": "BLOCKED",
+      "reason": "Mozilla Firefox executable not installed on environment"
+    },
+    "WebKit": {
+      "status": "BLOCKED",
+      "reason": "WebKit / Safari not supported natively on Windows environment"
+    }
+  },
+  "responsive_audit": [
+    {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "hasOverflow": false,
+      "route": "/",
+      "viewport": "320px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "hasOverflow": false,
+      "route": "/about",
+      "viewport": "320px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "hasOverflow": false,
+      "route": "/programmes",
+      "viewport": "320px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "hasOverflow": false,
+      "route": "/admissions",
+      "viewport": "320px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "hasOverflow": false,
+      "route": "/contact",
+      "viewport": "320px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "hasOverflow": false,
+      "route": "/news",
+      "viewport": "320px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "hasOverflow": false,
+      "route": "/gallery",
+      "viewport": "320px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "hasOverflow": false,
+      "route": "/",
+      "viewport": "375px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "hasOverflow": false,
+      "route": "/about",
+      "viewport": "375px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "hasOverflow": false,
+      "route": "/programmes",
+      "viewport": "375px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "hasOverflow": false,
+      "route": "/admissions",
+      "viewport": "375px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "hasOverflow": false,
+      "route": "/contact",
+      "viewport": "375px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "hasOverflow": false,
+      "route": "/news",
+      "viewport": "375px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 375,
+      "innerWidth": 375,
+      "hasOverflow": false,
+      "route": "/gallery",
+      "viewport": "375px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 753,
+      "innerWidth": 768,
+      "hasOverflow": false,
+      "route": "/",
+      "viewport": "768px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 753,
+      "innerWidth": 768,
+      "hasOverflow": false,
+      "route": "/about",
+      "viewport": "768px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 753,
+      "innerWidth": 768,
+      "hasOverflow": false,
+      "route": "/programmes",
+      "viewport": "768px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 753,
+      "innerWidth": 768,
+      "hasOverflow": false,
+      "route": "/admissions",
+      "viewport": "768px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 753,
+      "innerWidth": 768,
+      "hasOverflow": false,
+      "route": "/contact",
+      "viewport": "768px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 753,
+      "innerWidth": 768,
+      "hasOverflow": false,
+      "route": "/news",
+      "viewport": "768px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 753,
+      "innerWidth": 768,
+      "hasOverflow": false,
+      "route": "/gallery",
+      "viewport": "768px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1009,
+      "innerWidth": 1024,
+      "hasOverflow": false,
+      "route": "/",
+      "viewport": "1024px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1009,
+      "innerWidth": 1024,
+      "hasOverflow": false,
+      "route": "/about",
+      "viewport": "1024px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1009,
+      "innerWidth": 1024,
+      "hasOverflow": false,
+      "route": "/programmes",
+      "viewport": "1024px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1009,
+      "innerWidth": 1024,
+      "hasOverflow": false,
+      "route": "/admissions",
+      "viewport": "1024px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1009,
+      "innerWidth": 1024,
+      "hasOverflow": false,
+      "route": "/contact",
+      "viewport": "1024px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1009,
+      "innerWidth": 1024,
+      "hasOverflow": false,
+      "route": "/news",
+      "viewport": "1024px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1009,
+      "innerWidth": 1024,
+      "hasOverflow": false,
+      "route": "/gallery",
+      "viewport": "1024px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1351,
+      "innerWidth": 1366,
+      "hasOverflow": false,
+      "route": "/",
+      "viewport": "1366px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1351,
+      "innerWidth": 1366,
+      "hasOverflow": false,
+      "route": "/about",
+      "viewport": "1366px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1351,
+      "innerWidth": 1366,
+      "hasOverflow": false,
+      "route": "/programmes",
+      "viewport": "1366px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1351,
+      "innerWidth": 1366,
+      "hasOverflow": false,
+      "route": "/admissions",
+      "viewport": "1366px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1351,
+      "innerWidth": 1366,
+      "hasOverflow": false,
+      "route": "/contact",
+      "viewport": "1366px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1351,
+      "innerWidth": 1366,
+      "hasOverflow": false,
+      "route": "/news",
+      "viewport": "1366px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1351,
+      "innerWidth": 1366,
+      "hasOverflow": false,
+      "route": "/gallery",
+      "viewport": "1366px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1905,
+      "innerWidth": 1920,
+      "hasOverflow": false,
+      "route": "/",
+      "viewport": "1920px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1905,
+      "innerWidth": 1920,
+      "hasOverflow": false,
+      "route": "/about",
+      "viewport": "1920px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1905,
+      "innerWidth": 1920,
+      "hasOverflow": false,
+      "route": "/programmes",
+      "viewport": "1920px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1905,
+      "innerWidth": 1920,
+      "hasOverflow": false,
+      "route": "/admissions",
+      "viewport": "1920px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1905,
+      "innerWidth": 1920,
+      "hasOverflow": false,
+      "route": "/contact",
+      "viewport": "1920px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1905,
+      "innerWidth": 1920,
+      "hasOverflow": false,
+      "route": "/news",
+      "viewport": "1920px",
+      "status": "PASS"
+    },
+    {
+      "scrollWidth": 1905,
+      "innerWidth": 1920,
+      "hasOverflow": false,
+      "route": "/gallery",
+      "viewport": "1920px",
+      "status": "PASS"
+    }
+  ],
+  "interactive_workflows": {
+    "mobile_nav_drawer": {
+      "initially_closed": true,
+      "open_clicked": true,
+      "drawer_open": true,
+      "close_clicked": true,
+      "drawer_closed": true,
+      "status": "PASS"
+    },
+    "search_dialog": {
+      "open_search": true,
+      "typed_query": true,
+      "has_computer_result": true,
+      "close_search": true,
+      "status": "PASS"
+    },
+    "admissions_submission": {
+      "fill_admissions": true,
+      "submit_admissions": true,
+      "has_reg_heading": true,
+      "has_app_ref": true,
+      "status": "PASS"
+    },
+    "contact_submission": {
+      "fill_contact": true,
+      "submit_contact": true,
+      "contact_success": true,
+      "status": "PASS"
+    },
+    "gallery_lightbox": {
+      "open_lightbox": true,
+      "lightbox_active": true,
+      "nav_next": true,
+      "close_lightbox": true,
+      "lightbox_closed": true,
+      "status": "PASS"
+    },
+    "admin_portal": {
+      "invalid_login_blocked": true,
+      "login_successful": true,
+      "metrics_rendered": true,
+      "admissions_triage_verified": true,
+      "messages_triage_verified": true,
+      "logout_successful": true,
+      "status": "PASS"
+    }
+  },
+  "security_privacy": {
+    "unauthenticated_admin_api_protection": {
+      "all_protected": true,
+      "endpoints": [
+        {
+          "endpoint": "/api/v1/admin/auth/me",
+          "status": 401,
+          "protected": true
+        },
+        {
+          "endpoint": "/api/v1/site-settings/admin/dashboard/stats",
+          "status": 401,
+          "protected": true
+        },
+        {
+          "endpoint": "/api/v1/site-settings/admin/all",
+          "status": 401,
+          "protected": true
+        },
+        {
+          "endpoint": "/api/v1/admissions-enquiries/admin/all",
+          "status": 401,
+          "protected": true
+        },
+        {
+          "endpoint": "/api/v1/contact-messages/admin/all",
+          "status": 401,
+          "protected": true
+        },
+        {
+          "endpoint": "/api/v1/departments/admin/all",
+          "status": 401,
+          "protected": true
+        },
+        {
+          "endpoint": "/api/v1/programmes/admin/all",
+          "status": 401,
+          "protected": true
+        },
+        {
+          "endpoint": "/api/v1/news/admin/all",
+          "status": 401,
+          "protected": true
+        },
+        {
+          "endpoint": "/api/v1/gallery/admin/all",
+          "status": 401,
+          "protected": true
+        }
+      ]
+    },
+    "public_news_sanitization": {
+      "status": 200,
+      "total_returned": 4,
+      "only_published": true
+    },
+    "frontend_bundle_secret_scan": {
+      "files_scanned": 60,
+      "secrets_found": false,
+      "status": "PASS"
+    }
+  }
+}

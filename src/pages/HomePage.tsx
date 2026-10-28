@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import {
   HeroSection,
   InstitutionalFacts,
-  AboutPreview,
   AcademicProgrammes,
   AcademicExperience,
   CampusLifeGallery,
@@ -31,28 +30,25 @@ export const HomePage: React.FC = () => {
       {/* 3. Announcements & Quick Links */}
       <InstitutionalFacts />
 
-      {/* 4. About ANR */}
-      <AboutPreview />
-
-      {/* 5. Programmes & Departments */}
+      {/* 4. Programmes & Departments */}
       <AcademicProgrammes />
 
-      {/* 6. Academic Experience */}
+      {/* 5. Academic Experience */}
       <AcademicExperience />
 
-      {/* 7. Student Life & Campus Gallery */}
+      {/* 6. Student Life & Campus Gallery */}
       <CampusLifeGallery />
 
-      {/* 8. Facilities & Transport */}
+      {/* 7. Facilities & Transport */}
       <FacilitiesPreview />
 
-      {/* 9. News & Events */}
+      {/* 8. News & Events */}
       <NewsEvents />
 
-      {/* 10. Admissions Conversion CTA */}
+      {/* 9. Admissions Conversion CTA */}
       <AdmissionsCTA />
 
-      {/* 11. Footer (rendered by BaseLayout) */}
+      {/* 10. Footer (rendered by BaseLayout) */}
     </div>
   )
 }

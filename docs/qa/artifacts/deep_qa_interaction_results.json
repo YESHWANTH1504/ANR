@@ -1,0 +1,47 @@
+{
+  "mobile_nav_drawer": {
+    "initially_closed": true,
+    "open_clicked": true,
+    "drawer_open": true,
+    "close_clicked": true,
+    "drawer_closed": true,
+    "status": "PASS"
+  },
+  "search_dialog": {
+    "open_search": true,
+    "typed_query": true,
+    "has_computer_result": true,
+    "close_search": true,
+    "status": "PASS"
+  },
+  "admissions_submission": {
+    "fill_admissions": true,
+    "submit_admissions": true,
+    "has_reg_heading": true,
+    "has_app_ref": true,
+    "status": "PASS"
+  },
+  "contact_submission": {
+    "fill_contact": true,
+    "submit_contact": true,
+    "contact_success": true,
+    "status": "PASS"
+  },
+  "gallery_lightbox": {
+    "open_lightbox": true,
+    "lightbox_active": true,
+    "nav_next": true,
+    "close_lightbox": true,
+    "lightbox_closed": true,
+    "status": "PASS"
+  },
+  "admin_portal": {
+    "invalid_login_blocked": true,
+    "login_successful": true,
+    "metrics_rendered": true,
+    "admissions_triage_verified": true,
+    "messages_triage_verified": true,
+    "logout_successful": true,
+    "status": "PASS"
+  }
+}

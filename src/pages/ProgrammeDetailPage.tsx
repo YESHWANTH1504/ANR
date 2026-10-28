@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { BookOpen, ArrowRight, Layers } from 'lucide-react'
 import { Container } from '@/components/shared/Container'
@@ -7,7 +7,7 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { H1, TextLead } from '@/components/ui/Typography'
-import { getProgrammeBySlug } from '@/data/programmes'
+import { getProgrammeBySlug, type Programme } from '@/data/programmes'
 import {
   ProgrammeDetailHero,
   ProgrammeFacts,
@@ -16,10 +16,39 @@ import {
   RelatedProgrammes,
   ProgrammeDetailCTA,
 } from '@/sections/programme-detail'
+import { publicService } from '@/api/services/publicService'
 
 export const ProgrammeDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
-  const programme = slug ? getProgrammeBySlug(slug) : undefined
+  const [programme, setProgramme] = useState<Programme | undefined>(() =>
+    slug ? getProgrammeBySlug(slug) : undefined
+  )
+
+  useEffect(() => {
+    if (!slug) return
+
+    publicService
+      .getProgramme(slug)
+      .then((data) => {
+        if (data) {
+          setProgramme({
+            id: data.id,
+            name: data.name,
+            slug: data.slug,
+            degree: data.degree,
+            level: (data.level as Programme['level']) || 'UG',
+            departmentId: data.department_id,
+            departmentName: data.department_name || '',
+            durationYears: data.duration_years,
+            description: data.description,
+            overview: data.overview,
+          })
+        }
+      })
+      .catch(() => {
+        // Fall back gracefully to verified initial programme
+      })
+  }, [slug])
 
   useEffect(() => {
     const originalTitle = document.title

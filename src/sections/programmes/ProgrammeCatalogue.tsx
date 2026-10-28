@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { BookOpen } from 'lucide-react'
 import { Container } from '@/components/shared/Container'
 import { Section } from '@/components/shared/Section'
@@ -7,16 +7,44 @@ import { Button } from '@/components/ui/Button'
 import { PROGRAMMES, type Programme } from '@/data/programmes'
 import { ProgrammeCard } from './ProgrammeCard'
 import { ProgrammeFilters, type LevelFilter } from './ProgrammeFilters'
+import { publicService } from '@/api/services/publicService'
 
 export const ProgrammeCatalogue: React.FC = () => {
+  const [programmesList, setProgrammesList] = useState<Programme[]>(PROGRAMMES)
   const [activeLevel, setActiveLevel] = useState<LevelFilter>('ALL')
   const [searchQuery, setSearchQuery] = useState<string>('')
 
-  const ugCount = useMemo(() => PROGRAMMES.filter((p) => p.level === 'UG').length, [])
-  const pgCount = useMemo(() => PROGRAMMES.filter((p) => p.level === 'PG').length, [])
+  useEffect(() => {
+    publicService
+      .getProgrammes()
+      .then((data) => {
+        if (data && data.length > 0) {
+          setProgrammesList(
+            data.map((p) => ({
+              id: p.id,
+              name: p.name,
+              slug: p.slug,
+              degree: p.degree,
+              level: (p.level as Programme['level']) || 'UG',
+              departmentId: p.department_id,
+              departmentName: p.department_name || '',
+              durationYears: p.duration_years,
+              description: p.description,
+              overview: p.overview,
+            }))
+          )
+        }
+      })
+      .catch(() => {
+        // Fall back gracefully to verified initial programmes
+      })
+  }, [])
+
+  const ugCount = useMemo(() => programmesList.filter((p) => p.level === 'UG').length, [programmesList])
+  const pgCount = useMemo(() => programmesList.filter((p) => p.level === 'PG').length, [programmesList])
 
   const filteredProgrammes = useMemo(() => {
-    return PROGRAMMES.filter((prog: Programme) => {
+    return programmesList.filter((prog: Programme) => {
       // Level check
       if (activeLevel !== 'ALL' && prog.level !== activeLevel) {
         return false
@@ -34,7 +62,7 @@ export const ProgrammeCatalogue: React.FC = () => {
 
       return true
     })
-  }, [activeLevel, searchQuery])
+  }, [programmesList, activeLevel, searchQuery])
 
   const handleReset = () => {
     setActiveLevel('ALL')
@@ -52,7 +80,7 @@ export const ProgrammeCatalogue: React.FC = () => {
           onLevelChange={setActiveLevel}
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
-          totalCount={PROGRAMMES.length}
+          totalCount={programmesList.length}
           filteredCount={filteredProgrammes.length}
           ugCount={ugCount}
           pgCount={pgCount}

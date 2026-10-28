@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Calendar, Tag, ShieldCheck, Newspaper } from 'lucide-react'
 import { Container } from '@/components/shared/Container'
@@ -7,11 +7,37 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { H1, TextLead, TextBody, TextSmall } from '@/components/ui/Typography'
-import { NEWS_ARTICLES } from '@/data/news'
+import { NEWS_ARTICLES, type NewsArticle } from '@/data/news'
+import { publicService } from '@/api/services/publicService'
 
 export const NewsDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>()
-  const article = NEWS_ARTICLES.find((item) => item.slug === slug)
+  const [article, setArticle] = useState<NewsArticle | undefined>(() =>
+    NEWS_ARTICLES.find((item) => item.slug === slug)
+  )
+
+  useEffect(() => {
+    if (!slug) return
+
+    publicService
+      .getNewsArticle(slug)
+      .then((data) => {
+        if (data) {
+          setArticle({
+            id: data.id,
+            title: data.title,
+            slug: data.slug,
+            date: data.publication_date || 'Recent',
+            category: (data.category as NewsArticle['category']) || 'Notice',
+            summary: data.summary,
+            content: data.content,
+          })
+        }
+      })
+      .catch(() => {
+        // Fall back to static dataset if available
+      })
+  }, [slug])
 
   useEffect(() => {
     const originalTitle = document.title
